@@ -1,0 +1,22 @@
+# dbt
+target/
+dbt_packages/
+logs/
+.dbt/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+# Secrets — NEVER commit these
+profiles.yml
+*.env
+secrets.yml
+
+# OS
+.DS_Store
+Thumbs.db

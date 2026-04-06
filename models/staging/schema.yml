@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: airbnb_raw
+    database: AIRBNB
+    schema: RAW
+    tables:
+      - name: listings
+      - name: reviews
+      - name: calendar
+
+models:
+  - name: stg_listings
+    description: "Staged listings from raw Airbnb data (Bronze layer)"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing"
+        tests:
+          - unique
+          - not_null
+      - name: host_id
+        tests:
+          - not_null
+      - name: price
+        tests:
+          - not_null
+
+  - name: stg_reviews
+    description: "Staged reviews from raw Airbnb data (Bronze layer)"
+    columns:
+      - name: review_id
+        tests:
+          - unique
+          - not_null
+      - name: listing_id
+        tests:
+          - not_null
+      - name: review_date
+        tests:
+          - not_null
+
+  - name: stg_calendar
+    description: "Staged calendar from raw Airbnb data (Bronze layer)"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
+      - name: calendar_date
+        tests:
+          - not_null
