@@ -188,5 +188,5 @@ stg_calendar ──┘    silver_reviews  ──┤──► fact_bookings
 
 ## Author
 
-**Mudasir** | Data Engineer
-Based on tutorial by Ansh Lamba: [YouTube](https://www.youtube.com/watch?v=3SZSDKEZqoA)
+**Mudasir** | 
+
